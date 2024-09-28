@@ -49,7 +49,6 @@ The project is organized using the **nwidart/laravel-modules** package, which se
 
 - **Laravel 11**: The latest version of Laravel used for building the backend API.
 - **Laravel Modules**: The project uses the `nwidart/laravel-modules` package to split the functionality into separate modules.
-- **Laravel Passport**: For handling API authentication and authorization.
 - **Postman**: For testing the API endpoints during development.
 - **MySQL**: Database to store data for courses, students, enrollments, etc.
 
@@ -89,12 +88,7 @@ To set up the project locally:
     php artisan migrate
     ```
 
-7. Install Laravel Passport for API authentication:
-    ```bash
-    php artisan passport:install
-    ```
-
-8. Start the server:
+7. Start the server:
     ```bash
     php artisan serve
     ```
@@ -108,7 +102,7 @@ This project provides API endpoints to manage courses, students, enrollments, an
 
 ## Authentication
 
-The project uses **Laravel Passport** to secure API routes. Admin access is limited by assigning a specific email and password, while students will only be able to register, log in, and perform student-specific actions.
+The project uses **Laravel Sanctum** to secure API routes. Admin access is limited by assigning a specific email and password, while students will only be able to register, log in, and perform student-specific actions.
 
 To authenticate:
 - Admins: Use the designated admin email and password set in the database.
